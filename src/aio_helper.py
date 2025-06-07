@@ -152,5 +152,5 @@ async def run_async(func: Callable, *args, prefer_pool: POOL_TYPE = None, **kwar
 def shutdown():
     if aioProcessExecutor:
         aioProcessExecutor.shutdown(wait=True)
-    if aioProcessExecutor:
+    if aioThreadExecutor:
         aioThreadExecutor.shutdown(wait=False)
